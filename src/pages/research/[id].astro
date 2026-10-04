@@ -1,0 +1,26 @@
+---
+import { render } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import ResearchArt from '../../components/ResearchArt.astro';
+import Icon from '../../components/Icon.astro';
+import { getResearchProjects } from '../../lib/collections';
+import { url } from '../../lib/urls';
+
+export async function getStaticPaths() {
+  return (await getResearchProjects()).map(project => ({
+    params: { id: project.id },
+    props: { project },
+  }));
+}
+
+interface Props { project: CollectionEntry<'research'>; }
+const { project } = Astro.props;
+const { Content } = await render(project);
+---
+<Layout title={project.data.title} description={project.data.description}>
+  <a class="text-link back-link" href={url('/research/')}><Icon name="arrow-left" />All research</a>
+  <div class="page-heading"><h1>{project.data.title}</h1><p>{project.data.description}</p><p class="page-meta">{project.data.field} · {project.data.year}</p><div class="resource-links">{project.data.links.map(link => <a class="button button-secondary" href={url(link.href)}>{link.label}<Icon name="arrow-up-right" /></a>)}</div></div>
+  <figure class="project-hero"><ResearchArt variant={project.data.illustration} /><figcaption class="illustration-caption">Conceptual illustration · Not clinical data or model output</figcaption></figure>
+  <article class="panel prose"><Content /></article>
+</Layout>

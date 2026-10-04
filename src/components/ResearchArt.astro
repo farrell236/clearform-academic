@@ -1,0 +1,50 @@
+---
+type ArtVariant = 'geometry' | 'retina' | 'language';
+interface Props { variant?: string; }
+const requestedVariant = Astro.props.variant;
+const supportedVariants: ArtVariant[] = ['geometry', 'retina', 'language'];
+const variant: ArtVariant = supportedVariants.includes(requestedVariant as ArtVariant)
+  ? requestedVariant as ArtVariant
+  : 'geometry';
+const rings = [26, 38, 50, 62];
+---
+<div class:list={['research-art', `art-${variant}`]} aria-hidden="true">
+  {variant === 'geometry' && (
+    <svg viewBox="0 0 400 300" fill="none">
+      <path class="art-grid" d="m42 229 152-78 162 70-152 77zM82 209l162 70M122 189l162 70M162 169l162 70M83 247l151-78M123 264l151-78M163 282l151-78" />
+      <path class="volume" d="m114 86 88-43 90 40v129l-88 44-90-40zM114 86l90 42 88-45M204 128v128M202 43v126l-88 47M202 169l90 43" />
+      <path class="plane-back" d="m122 92 72-34 82 38v91l-72 36-82-36z" />
+      <path class="plane-front" d="m82 163 110-58 124 54-112 60z" />
+      <g transform="matrix(1 -.5 1 .45 200 160)">
+        {rings.map(r => <ellipse class="contour" rx={r} ry={r * .58} />)}
+        <path class="crosshair" d="M-76 0h152M0-45v90" />
+        <ellipse class="contour-inner" rx="15" ry="9" />
+      </g>
+      <path class="scan-line" d="m113 178 110-57" />
+      <circle class="scan-point" cx="200" cy="159" r="4" />
+      <path class="annotation-line" d="M292 83h32v-22M114 216H81v24" />
+    </svg>
+  )}
+  {variant === 'retina' && (
+    <svg viewBox="0 0 400 300" fill="none">
+      <circle class="retina-disc" cx="200" cy="150" r="94" />
+      <circle class="retina-halo" cx="200" cy="150" r="107" />
+      <g class="retina-vessels">
+        <path d="M171 143c42-38 53-65 66-75M174 145c-30-17-44-44-47-57M174 145c51-7 86-13 111-38M174 147c31 32 55 53 74 82M173 147c-12 38-6 66-16 89M175 147c-26 7-43 27-59 45M223 107l37-11M208 91l-5-20M219 138l30 20 35 6M205 177l-2 28 16 29M244 205l27 6M162 180l-31 1M151 127l-10-26" />
+      </g>
+      <circle class="retina-origin" cx="173" cy="146" r="13" />
+      <g class="retina-landmarks"><circle cx="221" cy="168" r="5" /><circle cx="253" cy="126" r="4" /><circle cx="159" cy="199" r="4" /></g>
+    </svg>
+  )}
+  {variant === 'language' && (
+    <svg viewBox="0 0 400 300" fill="none">
+      <rect class="image-frame" x="47" y="69" width="132" height="162" rx="15" />
+      <path class="lung" d="M104 108c-21-1-40 30-38 66 1 16 20 12 33 3 10-7 8-41 5-69zM123 108c21-1 40 30 38 66-1 16-20 12-33 3-10-7-8-41-5-69z" />
+      <path class="crosshair" d="M112 94v65" />
+      <path class="flow" d="M188 150h32m-9-9 9 9-9 9" />
+      <rect class="report-frame" x="234" y="83" width="123" height="135" rx="13" />
+      <path class="report-heading" d="M254 106h61" />
+      <path class="report-lines" d="M254 130h80M254 146h70M254 162h77M254 178h53M254 194h64" />
+    </svg>
+  )}
+</div>

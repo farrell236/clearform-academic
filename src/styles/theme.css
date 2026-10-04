@@ -1,0 +1,76 @@
+/*
+ * Replaceable visual skin. Keep content, routes and component markup out of
+ * this file so palette and type changes remain content-compatible.
+ */
+:root {
+  color-scheme: light dark;
+  --canvas: #f2f2f7;
+  --surface: #ffffff;
+  --text: #1c1c1e;
+  --secondary: #565d68;
+  --accent: #005fc4;
+  --separator: #c7c7cc;
+  --quiet: #e8f3ff;
+  --ios-blue: #007aff;
+  --ios-cyan: #34aadc;
+  --ios-green: #4cd964;
+  --ios-pink: #ff2d55;
+  --ios-yellow: #ffcc00;
+  --art-bg: #e6f7ff;
+  --art-stroke: var(--ios-cyan);
+  --art-strong: var(--ios-blue);
+  --art-fill: #5ac8fa;
+  --art-grid: #bfe7f5;
+  --art-pink-bg: #fff0f4;
+  --art-pink-grid: #ffd1dc;
+  --art-green-bg: #effcf2;
+  --art-green-grid: #c8f3d2;
+  --focus: #005fc4;
+  --ambient-cool: rgba(18, 68, 128, .1);
+  --glass-header: rgba(255, 255, 255, .82);
+  --glass-menu: rgba(255, 255, 255, .97);
+  --glass-hover: rgba(0, 122, 255, .08);
+  --radius: .25rem;
+  --control-radius: .125rem;
+  --hairline: 1px;
+  font-family: 'Helvetica Neue', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  font-synthesis: none;
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: 6rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --canvas: #0b1020;
+    --surface: #151b2d;
+    --text: #f5f7ff;
+    --secondary: #b9c2d6;
+    --accent: #70b7ff;
+    --separator: #35415f;
+    --quiet: #20283c;
+    --ios-blue: #70b7ff;
+    --ios-cyan: #5ac8fa;
+    --ios-green: #4cd964;
+    --ios-pink: #ff4f70;
+    --ios-yellow: #ffd52a;
+    --art-bg: #10243d;
+    --art-stroke: var(--ios-cyan);
+    --art-strong: var(--ios-blue);
+    --art-fill: #2f6c96;
+    --art-grid: #29445e;
+    --art-pink-bg: #351628;
+    --art-pink-grid: #633049;
+    --art-green-bg: #102c23;
+    --art-green-grid: #28543f;
+    --focus: #70b7ff;
+    --ambient-cool: rgba(45, 105, 170, .13);
+    --glass-header: rgba(21, 27, 45, .84);
+    --glass-menu: rgba(21, 27, 45, .96);
+    --glass-hover: rgba(112, 183, 255, .12);
+  }
+}
+
+@media (min-resolution: 2dppx) {
+  :root { --hairline: .5px; }
+}

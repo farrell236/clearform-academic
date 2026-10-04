@@ -1,0 +1,24 @@
+---
+import { profile } from '../config';
+import { url } from '../lib/urls';
+import Icon from './Icon.astro';
+---
+<aside class="profile" aria-label="Researcher profile">
+  <div class="profile-identity">
+    <a class="portrait-link" href={url('/')} aria-label={`${profile.name}, overview`}>
+      <img class="portrait" src={url(profile.portrait)} alt={profile.portraitAlt} width="400" height="400" fetchpriority="high" />
+    </a>
+    <div class="profile-name">
+      <p class="name">{profile.name}</p>
+      <p class="discipline">{profile.discipline}</p>
+    </div>
+  </div>
+  <p class="profile-intro">{profile.introduction}</p>
+  <nav class="profile-links" aria-label="Profile links">
+    {profile.links.map(link => <a href={url(link.href)}>{link.label}<Icon name="arrow-up-right" /></a>)}
+  </nav>
+  <div class="profile-actions">
+    <a class="button button-secondary" href={url(profile.cv)} download>Download CV<Icon name="download" /></a>
+    <a class="contact-link" href={`mailto:${profile.email}`}><Icon name="mail" />Get in touch</a>
+  </div>
+</aside>

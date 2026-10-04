@@ -1,0 +1,16 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHeading from '../components/PageHeading.astro';
+import Icon from '../components/Icon.astro';
+import { notFoundPage } from '../data/pages';
+import { url } from '../lib/urls';
+---
+<Layout title="Page not found" description={notFoundPage.metaDescription}>
+  <PageHeading title={notFoundPage.title} description={notFoundPage.description}>
+    <div class="intro-actions">
+      <a class="button button-primary" href={url('/')}>
+        {notFoundPage.actionLabel}<Icon />
+      </a>
+    </div>
+  </PageHeading>
+</Layout>

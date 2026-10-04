@@ -1,0 +1,26 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PageHeading from '../../components/PageHeading.astro';
+import { sectionPages } from '../../data/pages';
+import { getWriting } from '../../lib/collections';
+import { formatDate, url } from '../../lib/urls';
+
+const posts = await getWriting();
+const page = sectionPages.writing;
+---
+<Layout title={page.title} description={page.metaDescription}>
+  <PageHeading title={page.title} description={page.description} />
+  <ul class="writing-list">
+    {posts.map(post => (
+      <li>
+        <a class="writing-link" href={url(`/writing/${post.id}/`)}>
+          <span class="writing-title">
+            {post.data.title}
+            <small>{post.data.description}</small>
+          </span>
+          <span class="writing-date">{formatDate(post.data.published)}</span>
+        </a>
+      </li>
+    ))}
+  </ul>
+</Layout>

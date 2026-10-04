@@ -1,0 +1,16 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PageHeading from '../../components/PageHeading.astro';
+import ResearchCard from '../../components/ResearchCard.astro';
+import { sectionPages } from '../../data/pages';
+import { getResearchProjects } from '../../lib/collections';
+
+const projects = await getResearchProjects();
+const page = sectionPages.research;
+---
+<Layout title={page.title} description={page.metaDescription}>
+  <PageHeading title={page.title} description={page.description} />
+  <div class="research-list">
+    {projects.map(project => <ResearchCard project={project} featured headingLevel={2} />)}
+  </div>
+</Layout>

@@ -1,0 +1,24 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const profiles = [
+  { id: 'scholar', title: 'Google Scholar profile', text: 'Replace the sample link in src/config.ts with your own public academic profile.' },
+  { id: 'github', title: 'GitHub profile', text: 'Replace the sample link in src/config.ts with your own code-hosting profile.' },
+  { id: 'linkedin', title: 'LinkedIn profile', text: 'Replace the sample link in src/config.ts with your own professional profile.' },
+];
+const projects = [
+  { id: 'structured', title: 'Structure-aware learning' },
+  { id: 'synthetic', title: 'Synthetic visual data' },
+  { id: 'multimodal', title: 'Visual observations and language' },
+];
+---
+<Layout title="Demo resources" description="Local placeholders for the fictional template's profile, paper, code and slide links.">
+  <div class="page-heading"><h1>Demo resources</h1><p>You followed a sample link. No real profile, paper, repository or slide deck is implied. These local destinations keep the public demo self-contained.</p></div>
+  <article class="panel prose">
+    {profiles.map(item => <section><h2 id={item.id}>{item.title}</h2><p>{item.text}</p></section>)}
+    {projects.map(project => <>
+      <section><h2 id={`paper-${project.id}`}>Sample paper: {project.title}</h2><p>This paper is fictional. Replace its link in the research Markdown and publication data with your own DOI, preprint or local document.</p></section>
+      <section><h2 id={`code-${project.id}`}>Sample code: {project.title}</h2><p>No repository is attached to this example. Replace this destination with a real project repository when customising the template.</p></section>
+      <section><h2 id={`slides-${project.id}`}>Sample slides: {project.title}</h2><p>No slide deck is included. Add your own public slides or remove the action if no resource is available.</p></section>
+    </>)}
+  </article>
+</Layout>

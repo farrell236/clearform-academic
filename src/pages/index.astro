@@ -1,0 +1,71 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ResearchCard from '../components/ResearchCard.astro';
+import Publication from '../components/Publication.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import Icon from '../components/Icon.astro';
+import { homePage } from '../data/pages';
+import { getPublications, getResearchProjects, getWriting } from '../lib/collections';
+import { url } from '../lib/urls';
+
+const projects = await getResearchProjects(true);
+const publications = await getPublications(true);
+const writing = await getWriting(homePage.writingLimit);
+---
+<Layout>
+  <section class="intro" aria-labelledby="intro-title">
+    <h1 id="intro-title">{homePage.title}</h1>
+    <p class="lede">{homePage.lede}</p>
+    <div class="intro-actions">
+      <a class="button button-primary" href={url(homePage.primaryAction.href)}>
+        {homePage.primaryAction.label}<Icon />
+      </a>
+      <a class="text-link" href={url(homePage.secondaryAction.href)}>
+        {homePage.secondaryAction.label}<Icon />
+      </a>
+    </div>
+  </section>
+  <section class="section" aria-labelledby="research-title">
+    <SectionHeading
+      id="research-title"
+      title={homePage.sections.research.title}
+      actionLabel={homePage.sections.research.actionLabel}
+      href="/research/"
+    />
+    <div class="research-list">
+      {projects.map((project, index) => <ResearchCard project={project} featured={index === 0} />)}
+    </div>
+  </section>
+  <section class="section" aria-labelledby="publications-title">
+    <SectionHeading
+      id="publications-title"
+      title={homePage.sections.publications.title}
+      actionLabel={homePage.sections.publications.actionLabel}
+      href="/publications/"
+    />
+    <div class="publication-list">
+      {publications.map(publication => <Publication publication={publication} />)}
+    </div>
+  </section>
+  <section class="section" aria-labelledby="writing-title">
+    <SectionHeading
+      id="writing-title"
+      title={homePage.sections.writing.title}
+      actionLabel={homePage.sections.writing.actionLabel}
+      href="/writing/"
+    />
+    <ul class="writing-list">
+      {writing.map(post => (
+        <li>
+          <a class="writing-link" href={url(`/writing/${post.id}/`)}>
+            <span class="writing-title">
+              {post.data.title}
+              <small>{post.data.category}</small>
+            </span>
+            <span class="writing-date">{post.data.published.getUTCFullYear()}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+</Layout>

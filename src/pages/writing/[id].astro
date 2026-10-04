@@ -1,0 +1,25 @@
+---
+import { render } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Icon from '../../components/Icon.astro';
+import { getWriting } from '../../lib/collections';
+import { formatDate, url } from '../../lib/urls';
+
+export async function getStaticPaths() {
+  return (await getWriting()).map(post => ({
+    params: { id: post.id },
+    props: { post },
+  }));
+}
+
+interface Props { post: CollectionEntry<'writing'>; }
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+<Layout title={post.data.title} description={post.data.description} kind="article" published={post.data.published}>
+  <a class="text-link back-link" href={url('/writing/')}><Icon name="arrow-left" />All writing</a>
+  <div class="page-heading"><h1>{post.data.title}</h1><p>{post.data.description}</p><p class="page-meta">{post.data.category} · <time datetime={post.data.published.toISOString()}>{formatDate(post.data.published)}</time></p></div>
+  {post.data.archived && <p class="archive-notice">Archived writing. Software versions and setup instructions may no longer be current.</p>}
+  <article class="panel prose"><Content /></article>
+</Layout>
