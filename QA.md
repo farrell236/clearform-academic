@@ -3,8 +3,8 @@
 Reviewed on 3 October 2026, scrubbed for use as a generic public starter and
 prepared for beta release on 4 October 2026.
 Status: **complete as a reusable beta template with fictional demo content**.
-A GitHub Pages workflow is configured for the public preview; no distribution
-license has been assigned.
+A GitHub Pages workflow is configured for the public preview. The repository is
+licensed under `GPL-3.0-or-later` with a separate provenance record.
 
 ## Coverage
 
@@ -23,9 +23,9 @@ license has been assigned.
 
 - Replaced identity, biography, affiliations, contact address and account links
   with Alex Example, Example University and the reserved example.org domain.
-- Removed the copied real portrait and CV. Added original SVG avatar artwork and
-  a one-page sample PDF labelled fictional throughout; checked its text,
-  metadata and rendered layout. Its optional generator is included.
+- Removed the copied real portrait and CV. Added project-specific SVG avatar
+  artwork and a one-page sample PDF labelled fictional throughout; checked its
+  text, metadata and rendered layout. Its optional generator is included.
 - Replaced every project, publication, coauthor, teaching activity, talk and
   writing example with invented sample content. BibTeX files also say fictional.
 - Replaced real paper identifiers, repositories, profile IDs and slides URLs.
@@ -251,9 +251,10 @@ unsuppressed check and will report the advisory until upstream is fixed.
 - For your own website, replace every fictional identity, institution, project,
   citation, activity, article, contact address, resource link and CV. Turn off
   demo mode only after replacing the sample content. Verify all factual claims.
-- For a public template release, retain fictional content, choose a distribution
-  license and exclude the surrounding workspace, local caches and environment
-  files. Review any Git history if publishing from an existing repository.
+- For a public template release, retain fictional content, the GPL license and
+  attribution record. Exclude the surrounding workspace, local caches and
+  environment files. Review any Git history if publishing from an existing
+  repository.
 - For a personalised fork, the workflow derives its Pages origin and repository
   path automatically. Remove preview indexing restrictions only at an
   intentional launch.

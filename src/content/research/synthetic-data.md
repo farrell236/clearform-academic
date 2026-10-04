@@ -22,7 +22,7 @@ This fictional project asks how synthetic images could support experiments when 
 
 A real project page could describe controllable inputs, evaluation criteria and the limitations of generated data. Use this space to explain which resources are available and how collaborators can reproduce the work.
 
-The biological network illustration is decorative, original template artwork. It is not a photograph, patient record or model output.
+The biological network illustration is decorative, project-specific template artwork. It is not a photograph, patient record or model-generated raster image.
 
 ## Sample publication
 

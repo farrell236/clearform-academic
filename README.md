@@ -2,7 +2,8 @@
 
 A quiet, content-first academic theme for Astro. Its versioned content contract
 keeps authored research, publications and writing independent from visual theme
-updates. All profile and research content in the starter is fictional.
+updates. All profile and research content in the starter is fictional. Clearform
+is free software distributed under `GPL-3.0-or-later`.
 
 Live demo: [farrell236.github.io/clearform-academic](https://farrell236.github.io/clearform-academic/)
 
@@ -51,10 +52,11 @@ derives citation display fields, validates the filename and automatically adds
 Paper, Code, Slides and downloadable BibTeX actions when their fields exist.
 
 Alex Example, Example University, all coauthors, projects, publications, talks,
-teaching and writing are invented placeholders. The avatar is original SVG;
-the downloadable CV and BibTeX files are explicitly fictional. The email uses
-the reserved example.org domain. There are no real account IDs, affiliations,
-paper identifiers, copied photographs or personal documents in this starter.
+teaching and writing are invented placeholders. The avatar is a project-specific
+SVG; the downloadable CV and BibTeX files are explicitly fictional. The email
+uses the reserved example.org domain. There are no real account IDs,
+affiliations, paper identifiers, copied photographs or personal documents in
+this starter.
 
 Academic profile, paper, code and slide actions lead to `/about/demo-resources/` anchors.
 They remain navigable without suggesting that fictional resources really exist.
@@ -110,10 +112,11 @@ and print contexts keep opaque navigation. No JavaScript is required for the eff
 
 Early compositional inspiration came from
 [Hugo Future Imperfect](https://github.com/jpescador/hugo-future-imperfect),
-but Clearform is an original implementation and does not copy its templates,
+but Clearform is an independent implementation and does not copy its templates,
 JavaScript or CSS.
-Avatar, research graphics and interface icons are original code-native SVG
-illustrations, not photographs, medical data, SF Symbols or model outputs.
+Avatar, research graphics and interface icons are project-specific code-native
+SVG illustrations, not photographs, medical data, SF Symbols, Apple artwork or
+model-generated raster assets.
 The sample CV can optionally be regenerated with
 `python scripts/create-sample-cv.py` (requires ReportLab); Python is not required
 to build the website. SVG social artwork can be edited and re-exported to PNG.
@@ -142,8 +145,20 @@ lockfile, not the surrounding workspace. Exclude `node_modules/`, `.astro/`,
 is regenerated from the generic source for a demo deployment.
 
 The demo-content checks confirm the placeholder email, local resource URLs,
-the exact neutral external platform homepages,
-fictional citations and neutral assets. They are not a general-purpose PII
-detector for personal content that you might add later. Choose an appropriate
-distribution license before granting reuse rights; none is assigned in this
-beta release.
+the exact neutral external platform homepages, fictional citations and neutral
+assets. They are not a general-purpose PII detector for personal content that
+you might add later.
+
+## License and attribution
+
+Clearform is distributed under the
+[GNU General Public License v3.0 or later](LICENSE). Distributed modified
+versions must remain under the GPL, include corresponding source, preserve the
+applicable copyright and license notices, and identify their changes as the
+license requires.
+
+[ATTRIBUTION.md](ATTRIBUTION.md) records the project's AI-assisted development,
+Apple design references, design-review source and earlier compositional
+inspiration. These acknowledgements do not imply affiliation or endorsement.
+
+Copyright (C) 2026 Clearform contributors

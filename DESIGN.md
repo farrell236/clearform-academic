@@ -82,9 +82,9 @@ Writing / footer
 ```
 
 Signature: a quiet three-plane imaging illustration, with the highlighted plane
-representing the link between image geometry and learning. It is original SVG,
-explicitly a conceptual illustration, not patient imagery or a research result.
-Other graphics are also conceptual, not purported data.
+representing the link between image geometry and learning. It is a
+project-specific SVG, explicitly a conceptual illustration, not patient imagery
+or a research result. Other graphics are also conceptual, not purported data.
 
 Motion: none on entry, no parallax or automatic animation. Brief colour feedback
 only, disabled when reduced motion is requested. Surfaces remain opaque, so
@@ -111,7 +111,7 @@ numbering and citation-count badges have been removed.
 - `dark-mode.md › Best practices`: follow `prefers-color-scheme` automatically;
   no site-specific switch that competes with the user's system preference.
 - `motion.md › Best practices`: no unnecessary motion; honour reduced motion.
-- `branding.md › Best practices`: original research graphics provide identity;
+- `branding.md › Best practices`: project-specific research graphics provide identity;
   navigation remains familiar, and the design does not imitate Apple's branding.
 - `sidebars.md › Platform considerations`: the web profile rail becomes a
   compact identity block when horizontal room is scarce.
@@ -128,3 +128,6 @@ identity. Example-domain email and local demo-resource links avoid associating
 the fictional profile with real accounts. Person structured data is omitted
 while demo mode is enabled. The design remains reusable, and no deployment is
 assumed.
+
+Project provenance, acknowledgements and the non-affiliation statement are
+maintained in [ATTRIBUTION.md](ATTRIBUTION.md).
