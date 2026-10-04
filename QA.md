@@ -3,8 +3,9 @@
 Reviewed on 3 October 2026, scrubbed for use as a generic public starter and
 prepared for beta release on 4 October 2026.
 Status: **complete as a reusable beta template with fictional demo content**.
-A GitHub Pages workflow is configured for the public preview. The repository is
-licensed under `GPL-3.0-or-later` with a separate provenance record.
+A manual-only GitHub Pages workflow is included, but Pages is not configured or
+deployed. The repository is licensed under `GPL-3.0-or-later` with a separate
+provenance record.
 
 ## Coverage
 

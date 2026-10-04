@@ -5,8 +5,6 @@ keeps authored research, publications and writing independent from visual theme
 updates. All profile and research content in the starter is fictional. Clearform
 is free software distributed under `GPL-3.0-or-later`.
 
-Live demo: [farrell236.github.io/clearform-academic](https://farrell236.github.io/clearform-academic/)
-
 **Start with [EDITING.md](EDITING.md)** for the manual editing workflow, content
 recipes, GitHub Pages settings and a recovery checklist. Theme authors and
 upgraders should also read the compatibility contract in [THEME.md](THEME.md).
@@ -88,12 +86,13 @@ ASTRO_BASE=/website/ pnpm build
 ASTRO_BASE=/website/ pnpm test
 ```
 
-The included `deploy-pages.yml` workflow derives the owner and repository path,
-verifies the project and publishes the fictional demo from `main`. The demo
-intentionally keeps `PUBLIC_IS_PREVIEW=true`, producing `noindex, nofollow`
-metadata and a disallowing robots file. Set `PUBLIC_IS_PREVIEW=false` only for
-an intentional launch of a fully personalised site. The local default deployment
-origin remains `https://example.org`, a neutral placeholder.
+No live demo is published. The included `deploy-pages.yml` workflow is
+manual-only, derives the owner and repository path, and verifies the project
+before an intentional deployment. Its demo configuration keeps
+`PUBLIC_IS_PREVIEW=true`, producing `noindex, nofollow` metadata and a
+disallowing robots file. Set `PUBLIC_IS_PREVIEW=false` only for an intentional
+launch of a fully personalised site. The local default deployment origin remains
+`https://example.org`, a neutral placeholder.
 
 A 1200×630 PNG social image is included, with editable SVG source beside it.
 When changing the identity, regenerate the PNG and check social previews after
