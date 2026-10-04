@@ -4,6 +4,8 @@ A quiet, content-first academic theme for Astro. Its versioned content contract
 keeps authored research, publications and writing independent from visual theme
 updates. All profile and research content in the starter is fictional.
 
+Live demo: [farrell236.github.io/clearform-academic](https://farrell236.github.io/clearform-academic/)
+
 **Start with [EDITING.md](EDITING.md)** for the manual editing workflow, content
 recipes, GitHub Pages settings and a recovery checklist. Theme authors and
 upgraders should also read the compatibility contract in [THEME.md](THEME.md).
@@ -84,11 +86,12 @@ ASTRO_BASE=/website/ pnpm build
 ASTRO_BASE=/website/ pnpm test
 ```
 
-No publishing workflow is enabled yet: deployment belongs to the professional
-site phase. This preview defaults to `noindex, nofollow` and a disallowing robots
-file. Set `PUBLIC_IS_PREVIEW=false` only for an intentional final launch.
-The default deployment origin is `https://example.org`, a neutral placeholder.
-No real GitHub account, Pages repository or domain is assumed.
+The included `deploy-pages.yml` workflow derives the owner and repository path,
+verifies the project and publishes the fictional demo from `main`. The demo
+intentionally keeps `PUBLIC_IS_PREVIEW=true`, producing `noindex, nofollow`
+metadata and a disallowing robots file. Set `PUBLIC_IS_PREVIEW=false` only for
+an intentional launch of a fully personalised site. The local default deployment
+origin remains `https://example.org`, a neutral placeholder.
 
 A 1200×630 PNG social image is included, with editable SVG source beside it.
 When changing the identity, regenerate the PNG and check social previews after
@@ -142,4 +145,5 @@ The demo-content checks confirm the placeholder email, local resource URLs,
 the exact neutral external platform homepages,
 fictional citations and neutral assets. They are not a general-purpose PII
 detector for personal content that you might add later. Choose an appropriate
-distribution license before releasing the template; none is assigned here.
+distribution license before granting reuse rights; none is assigned in this
+beta release.

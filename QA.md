@@ -1,8 +1,10 @@
 # Completeness audit — Clearform
 
-Reviewed on 3 October 2026, then scrubbed for use as a generic public starter.
-Status: **complete as a local, reusable template with fictional demo content**.
-No public deployment or distribution license has been configured.
+Reviewed on 3 October 2026, scrubbed for use as a generic public starter and
+prepared for beta release on 4 October 2026.
+Status: **complete as a reusable beta template with fictional demo content**.
+A GitHub Pages workflow is configured for the public preview; no distribution
+license has been assigned.
 
 ## Coverage
 
@@ -154,7 +156,7 @@ that unknown research-art hints retain a neutral fallback.
 
 The same seventeen checks passed after a separate `/clearform-academic/` build.
 The root-path preview was rebuilt afterward. This validates static path
-generation; it is not evidence of an existing GitHub Pages deployment.
+generation independently of the GitHub Pages workflow.
 
 Browser checks in the Codex in-app browser:
 
@@ -252,8 +254,9 @@ unsuppressed check and will report the advisory until upstream is fixed.
 - For a public template release, retain fictional content, choose a distribution
   license and exclude the surrounding workspace, local caches and environment
   files. Review any Git history if publishing from an existing repository.
-- Choose the real GitHub repository/domain, configure deployment, and remove
-  preview indexing restrictions only at an intentional launch.
+- For a personalised fork, the workflow derives its Pages origin and repository
+  path automatically. Remove preview indexing restrictions only at an
+  intentional launch.
 - Test deployed social crawlers, 404 status, redirects and any sitemap.
 - Perform a full screen-reader and cross-browser/device audit. Actual 200%
   browser zoom, visual dark-mode rendering, and user preference combinations
