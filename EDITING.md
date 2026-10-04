@@ -19,7 +19,7 @@ be replaced at any time.
 
 ## First local run
 
-Install Node 22.12 or later and pnpm 11, then run:
+Install Node 22.13 or later and pnpm 11, then run:
 
 ```sh
 pnpm install --frozen-lockfile

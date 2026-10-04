@@ -12,7 +12,7 @@ upgraders should also read the compatibility contract in [THEME.md](THEME.md).
 
 ## Preview locally
 
-Use Node 22.12+ and pnpm. Dependencies and the package lock are pinned.
+Use Node 22.13+ and pnpm. Dependencies and the package lock are pinned.
 
 ```sh
 pnpm install --frozen-lockfile
