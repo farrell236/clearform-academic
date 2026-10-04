@@ -23,10 +23,6 @@ The design-review process referenced
 commit `904b0eedc7cc778152f545506075d5bb5219ce77`. No files from that repository
 are redistributed with Clearform.
 
-Early composition was informed by
-[Hugo Future Imperfect](https://github.com/jpescador/hugo-future-imperfect).
-Clearform does not redistribute its templates, JavaScript or CSS.
-
 ## Project material
 
 Clearform's implementation, documentation, fictional examples and

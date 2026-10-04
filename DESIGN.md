@@ -5,8 +5,8 @@ An academic-first, reusable Astro starter with fictional, shareable demo content
 ## Thesis and audience
 
 Help collaborators, researchers and hiring teams understand the research and
-reach its papers and code quickly. Keep Future Imperfect's portrait, profile
-rail, clear header and modular content; change the information hierarchy.
+reach its papers and code quickly. Use the portrait and profile rail to establish
+identity, then organise the main column around research and publications.
 
 ## Design reference and applicability
 

@@ -1,8 +1,8 @@
 # Theme and content compatibility
 
 This starter treats content as durable user data and the theme as replaceable
-presentation code. It follows the same practical principle as a Hugo site:
-layouts may evolve without requiring authors to rewrite their content.
+presentation code. Layouts may evolve without requiring authors to rewrite
+their content.
 
 The current public contract is **content format 1**. It is declared by
 `contentFormatVersion` in `src/config.ts` and supported by

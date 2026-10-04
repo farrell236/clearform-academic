@@ -109,10 +109,6 @@ opaque and table-like. The CSS-only `backdrop-filter` is progressive enhancement
 unsupported browsers and reduced-transparency, increased-contrast, forced-colour
 and print contexts keep opaque navigation. No JavaScript is required for the effect.
 
-Early compositional inspiration came from
-[Hugo Future Imperfect](https://github.com/jpescador/hugo-future-imperfect),
-but Clearform is an independent implementation and does not copy its templates,
-JavaScript or CSS.
 Avatar, research graphics and interface icons are project-specific code-native
 SVG illustrations, not photographs, medical data, SF Symbols, Apple artwork or
 model-generated raster assets.

@@ -268,8 +268,8 @@ unsuppressed check and will report the advisory until upstream is fixed.
 
 ## Final design critique
 
-Future Imperfect's profile rail, portrait and modular content remain recognisable.
-The hierarchy is now academic: research and citations lead; archived writing is
+The profile rail, portrait and modular content establish a clear identity. The
+hierarchy is academic: research and citations lead; archived writing is
 secondary. Opaque surfaces, a platform font stack, restrained accent colour and
 quiet diagrams apply the requested Apple reference without Apple branding or
 native-app chrome. Recent-post widgets, tag clouds, social-sharing panels,
