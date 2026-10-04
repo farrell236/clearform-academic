@@ -153,7 +153,7 @@ applicable copyright and license notices, and identify their changes as the
 license requires.
 
 [ATTRIBUTION.md](ATTRIBUTION.md) records the project's AI-assisted development,
-Apple design references, design-review source and earlier compositional
-inspiration. These acknowledgements do not imply affiliation or endorsement.
+Apple design references and design-review source. These acknowledgements do not
+imply affiliation or endorsement.
 
 Copyright (C) 2026 Clearform contributors
